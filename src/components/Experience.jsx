@@ -4,15 +4,6 @@ import { Calendar, Briefcase } from "lucide-react";
 
 const experienceData = [
   {
-    type: "freelancer",
-    icon: Briefcase,
-    title: "Freelance Software Developer",
-    company: "Freelancer.in (Remote)",
-    link: "https://www.freelancer.in/u/nilalochanbv",
-    date: "Jun 2026 – Present",
-    description: "Architect and develop bespoke full-stack web applications, custom automation scripts, and AI/LLM integrations for global clients on Freelancer.in. Utilize React, Node.js, Python, and SQL/NoSQL databases to deliver high-quality, scalable code aligned with user requirements.",
-  },
-  {
     type: "internship",
     icon: Briefcase,
     title: "Generative AI, LLM’s and Its Prototyping",
@@ -27,6 +18,15 @@ const experienceData = [
     company: "CodSoft (Remote)",
     date: "2025",
     description: "Developed multiple responsive web projects using HTML, CSS, JavaScript. Gained hands-on experience in deploying projects using platforms like GitHub Pages.",
+  },
+  {
+    type: "freelancer",
+    icon: Briefcase,
+    title: "Freelance Software Developer",
+    company: "Freelancer.in (Remote)",
+    link: "https://www.freelancer.in/u/nilalochanbv",
+    date: "Jun 2026 – Present",
+    description: "Architect and develop bespoke full-stack web applications, custom automation scripts, and AI/LLM integrations for global clients on Freelancer.in. Utilize React, Node.js, Python, and SQL/NoSQL databases to deliver high-quality, scalable code aligned with user requirements.",
   },
 ];
 
