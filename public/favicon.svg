@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="nsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#863bff" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <!-- Letter N -->
+  <rect x="10" y="20" width="10" height="60" rx="3" fill="url(#nsGradient)" />
+  <rect x="36" y="20" width="10" height="60" rx="3" fill="url(#nsGradient)" />
+  <polygon points="10,20 20,20 46,80 36,80" fill="url(#nsGradient)" />
+
+  <!-- Letter S -->
+  <rect x="54" y="20" width="36" height="11" rx="4" fill="url(#nsGradient)" />
+  <rect x="54" y="20" width="11" height="36" rx="4" fill="url(#nsGradient)" />
+  <rect x="54" y="45" width="36" height="11" rx="4" fill="url(#nsGradient)" />
+  <rect x="79" y="45" width="11" height="36" rx="4" fill="url(#nsGradient)" />
+  <rect x="54" y="70" width="36" height="11" rx="4" fill="url(#nsGradient)" />
+</svg>

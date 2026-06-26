@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="bg-black text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Theme setup to avoid flash of theme -->
+    <script>
+      (function() {
+        const saved = localStorage.getItem("theme");
+        if (saved === "light" || (!saved && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+          document.documentElement.classList.add("light");
+        } else {
+          document.documentElement.classList.remove("light");
+        }
+      })();
+    </script>
+    
+    <!-- SEO Setup -->
+    <title>Nilalochan B V</title>
+    <meta name="description" content="Portfolio of Nilalochan B V, a B.E. Computer Science & Engineering (Specialization in Blockchain) student. Specializing in high-performance Full Stack, Python development, and machine learning." />
+    <meta name="keywords" content="Nilalochan, Full Stack Developer, Python Developer, Software Engineer, Portfolio, Computer Science, Blockchain, B.E CSE Blockchain" />
+    <meta name="author" content="Nilalochan B V" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nilalochan | Full Stack Developer" />
+    <meta property="og:description" content="Portfolio of Nilalochan B V, B.E. CSE student. Building digital experiences through code & creativity." />
+    <meta property="og:site_name" content="Nilalochan Portfolio" />
+
+    <!-- Preconnect for premium typography speed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  </head>
+  <body class="bg-black text-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
