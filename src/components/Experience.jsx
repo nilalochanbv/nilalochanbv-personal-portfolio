@@ -4,6 +4,15 @@ import { Calendar, Briefcase } from "lucide-react";
 
 const experienceData = [
   {
+    type: "freelancer",
+    icon: Briefcase,
+    title: "Freelance Software Developer",
+    company: "Freelancer.in (Remote)",
+    link: "https://www.freelancer.in/u/nilalochanbv",
+    date: "Jun 2026 – Present",
+    description: "Architect and develop bespoke full-stack web applications, custom automation scripts, and AI/LLM integrations for global clients on Freelancer.in. Utilize React, Node.js, Python, and SQL/NoSQL databases to deliver high-quality, scalable code aligned with user requirements.",
+  },
+  {
     type: "internship",
     icon: Briefcase,
     title: "Generative AI, LLM’s and Its Prototyping",
@@ -95,9 +104,20 @@ export default function Experience() {
                       <h3 className="text-white font-display font-medium text-lg md:text-xl group-hover:text-neutral-200">
                         {item.title}
                       </h3>
-                      <span className="font-mono text-xs text-neutral-400 tracking-wide">
-                        {item.company}
-                      </span>
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-xs text-neutral-400 tracking-wide hover:text-white transition-colors duration-300 underline decoration-white/10 underline-offset-4"
+                        >
+                          {item.company}
+                        </a>
+                      ) : (
+                        <span className="font-mono text-xs text-neutral-400 tracking-wide">
+                          {item.company}
+                        </span>
+                      )}
                     </div>
 
                     {/* Detail content */}
