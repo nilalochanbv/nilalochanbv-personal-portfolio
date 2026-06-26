@@ -6,6 +6,10 @@ import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
+import { ThemeTransitionProvider } from "./hooks/useThemeTransition";
+import LiquidOverlay from "./components/theme-transition/LiquidOverlay";
+import "./styles/theme-transition.css";
+
 const About = lazy(() => import("./components/About"));
 const Projects = lazy(() => import("./components/Projects"));
 const Skills = lazy(() => import("./components/Skills"));
@@ -64,7 +68,7 @@ export default function App() {
   }, [loading]);
 
   return (
-    <>
+    <ThemeTransitionProvider>
       <AnimatePresence mode="wait">
         {loading && (
           <Loader key="loader" onComplete={() => setLoading(false)} />
@@ -97,6 +101,8 @@ export default function App() {
           </Suspense>
         </main>
       )}
-    </>
+
+      <LiquidOverlay />
+    </ThemeTransitionProvider>
   );
 }

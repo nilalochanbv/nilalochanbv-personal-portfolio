@@ -1,0 +1,50 @@
+/* Premium Liquid Theme Transition Supporting Styles */
+
+/* 1. Base transitioning page adjustments */
+html.theme-transitioning,
+html.theme-transitioning body {
+  cursor: wait !important;
+  pointer-events: none !important;
+}
+
+/* 2. Glass panels blur & scale animation */
+html.theme-transitioning .glass-panel,
+html.theme-transitioning .story-card {
+  filter: blur(8px) !important;
+  transform: scale(0.985) !important;
+  transition: filter 0.65s cubic-bezier(0.76, 0, 0.24, 1), 
+              transform 0.65s cubic-bezier(0.76, 0, 0.24, 1) !important;
+}
+
+/* 3. Navigation icons rotate animation */
+html.theme-transitioning nav svg,
+html.theme-transitioning button svg {
+  transform: rotate(180deg) !important;
+  transition: transform 0.65s cubic-bezier(0.76, 0, 0.24, 1) !important;
+}
+
+/* 4. Background grids and light beams shift */
+html.theme-transitioning .beam-light-1 {
+  transform: translate(3vw, 2vh) scale(1.05) !important;
+  filter: blur(15px) !important;
+  transition: transform 0.65s cubic-bezier(0.76, 0, 0.24, 1), 
+              filter 0.65s cubic-bezier(0.76, 0, 0.24, 1) !important;
+}
+
+html.theme-transitioning .beam-light-2 {
+  transform: translate(-3vw, -2vh) scale(1.05) !important;
+  filter: blur(15px) !important;
+  transition: transform 0.65s cubic-bezier(0.76, 0, 0.24, 1), 
+              filter 0.65s cubic-bezier(0.76, 0, 0.24, 1) !important;
+}
+
+/* 5. Smooth interpolation transitions for standard layout shifts and shadows */
+html.theme-transitioning * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: background-color 0.65s cubic-bezier(0.76, 0, 0.24, 1),
+              color 0.65s cubic-bezier(0.76, 0, 0.24, 1),
+              border-color 0.65s cubic-bezier(0.76, 0, 0.24, 1),
+              fill 0.65s cubic-bezier(0.76, 0, 0.24, 1),
+              stroke 0.65s cubic-bezier(0.76, 0, 0.24, 1) !important;
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, FileText, Sun, Moon } from "lucide-react";
+import { useThemeTransition } from "../hooks/useThemeTransition";
 
 // Inline brand icon SVGs to replace removed lucide-react brand icons
 const Github = ({ size = 16, className }) => (
@@ -54,27 +55,8 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Local theme state & toggle logic with persistence
-  const [isLightTheme, setIsLightTheme] = useState(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved) return saved === "light";
-    return document.documentElement.classList.contains("light") ||
-      (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches);
-  });
-
-  useEffect(() => {
-    if (isLightTheme) {
-      document.documentElement.classList.add("light");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.remove("light");
-      localStorage.setItem("theme", "dark");
-    }
-  }, [isLightTheme]);
-
-  const toggleTheme = () => {
-    setIsLightTheme((prev) => !prev);
-  };
+  // Use the premium liquid curve theme transition hook
+  const { isLightTheme, toggleTheme } = useThemeTransition();
 
   // Scroll to Hide/Reveal Navbar
   useEffect(() => {
