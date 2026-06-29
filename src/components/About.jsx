@@ -36,7 +36,7 @@ export default function About() {
     {
       num: "04",
       title: "Certifications",
-      text: "Certified in Gen AI, LLM & Prototyping (June 2025), NPTEL Cloud Computing (May 2025), and NPTEL Introduction to Internet of Things (April 2026).",
+      text: "Certified in IBM SkillsBuild - Make Agentic AI Work for You (June 2026), Anthropic - AI Fluency: Framework & Foundations (June 2026), AWS - Fundamentals of Generative AI (June 2026), NPTEL Introduction to Internet of Things (April 2026), Gen AI, LLM & Prototyping (June 2025), and NPTEL Cloud Computing (May 2025).",
       icon: Award,
       badgeClass: "badge-emerald",
       cardClass: "story-card card-emerald",
