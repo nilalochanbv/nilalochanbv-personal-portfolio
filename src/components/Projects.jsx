@@ -38,6 +38,9 @@ const techColors = {
   "Java": "text-rose-400 border-rose-500/15 bg-rose-500/[0.02] hover:border-rose-500/30 hover:bg-rose-500/[0.05] hover:text-rose-300",
   "LLM APIs": "text-violet-400 border-violet-500/15 bg-violet-500/[0.02] hover:border-violet-500/30 hover:bg-violet-500/[0.05] hover:text-violet-300",
   "Prompt Engineering": "text-cyan-400 border-cyan-500/15 bg-cyan-500/[0.02] hover:border-cyan-500/30 hover:bg-cyan-500/[0.05] hover:text-cyan-300",
+  "Fast API": "text-emerald-400 border-emerald-500/15 bg-emerald-500/[0.02] hover:border-emerald-500/30 hover:bg-emerald-500/[0.05] hover:text-emerald-300",
+  "Multi-dialect SQL": "text-cyan-400 border-cyan-500/15 bg-cyan-500/[0.02] hover:border-cyan-500/30 hover:bg-cyan-500/[0.05] hover:text-cyan-300",
+  "Multilingual language": "text-violet-400 border-violet-500/15 bg-violet-500/[0.02] hover:border-violet-500/30 hover:bg-violet-500/[0.05] hover:text-violet-300",
   
   // TypeScript Stack
   "TypeScript": "text-cyan-400 border-cyan-500/15 bg-cyan-500/[0.02] hover:border-cyan-500/30 hover:bg-cyan-500/[0.05] hover:text-cyan-300",
@@ -78,20 +81,20 @@ const projectsData = [
   {
     id: 2,
     num: "02",
-    name: "Code Logic Validator",
-    tagline: "AI Orchestration Logic Evaluation Engine",
-    description: "Building an AI agent that evaluates a beginner's problem solving logic written in plain text, without an actual code solution. Utilizes LLM-based orchestration for access correctness, provides targeted hints, and guides learners through reasoning steps autonomously.",
-    tech: ["Java", "LLM APIs", "Prompt Engineering"],
+    name: "DialectDB - Multilingual Text-to-SQL Pipeline",
+    tagline: "Multilingual Text-to-SQL Agent Pipeline",
+    description: "Building an AI agent that evaluates a beginner’s problem solving logic written in plain text, without an actual code solution. Utilizes LLM-based orchestration for access correctness, provides targeted hints, and guides learners through reasoning steps autonomously.",
+    tech: ["Python", "React", "Fast API", "Multi-dialect SQL", "Multilingual language"],
     github: "https://github.com/nilalochanbv",
     live: "https://github.com/nilalochanbv",
     visual: "validator",
     readmeDetails: {
       features: [
-        "Natural Language Evaluator: Evaluates pseudocode and logic sentences directly using LLM evaluation models.",
-        "Adaptive Hinting System: Generates localized suggestions to help learners correct logic errors step-by-step.",
-        "Automated Cognitive Mapping: Diagnoses specific concept deficiencies to recommend learning paths."
+        "Logic Evaluation: Evaluates plain text pseudocode and problem solving logic without needing code execution.",
+        "Adaptive Prompting: Provides contextual clues and targets logic errors step-by-step using LLM agent helpers.",
+        "Multi-dialect Translation: Maps logical constructs to complex SQL queries across different database dialects."
       ],
-      architecture: "Engineered using Java (Spring Boot) and integrated with LLM reasoning agents via Prompt Engineering to evaluate abstract problem-solving logic."
+      architecture: "Orchestrated using a React frontend, Python FastAPI logic validation controller, and Gemini AI agent pipelines."
     }
   },
   {
