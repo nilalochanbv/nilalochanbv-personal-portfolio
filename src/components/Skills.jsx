@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Code, Globe, Database, Layers, Users } from "lucide-react";
+import { Code, Globe, Database, Layers, Wrench, Users } from "lucide-react";
 
 const iconMap = {
   code: { icon: Code, colorClass: "text-amber-400 bg-amber-500/10 border-amber-500/20 shadow-[0_0_15px_rgba(245,158,11,0.06)]" },
   globe: { icon: Globe, colorClass: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20 shadow-[0_0_15px_rgba(6,182,212,0.06)]" },
   database: { icon: Database, colorClass: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.06)]" },
   layers: { icon: Layers, colorClass: "text-violet-400 bg-violet-500/10 border-violet-500/20 shadow-[0_0_15px_rgba(139,92,246,0.06)]" },
+  wrench: { icon: Wrench, colorClass: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20 shadow-[0_0_15px_rgba(6,182,212,0.06)]" },
   users: { icon: Users, colorClass: "text-rose-400 bg-rose-500/10 border-rose-500/20 shadow-[0_0_15px_rgba(244,63,94,0.06)]" },
 };
 
@@ -14,6 +15,7 @@ const cardColors = [
   "card-cyan",
   "card-emerald",
   "card-violet",
+  "card-cyan",
   "card-rose"
 ];
 
@@ -25,39 +27,57 @@ const skillsCategories = [
     skills: [
       { name: "Java", level: "Advanced" },
       { name: "Python", level: "Advanced" },
+      { name: "TypeScript", level: "Intermediate" },
+      { name: "JavaScript", level: "Advanced" },
       { name: "C", level: "Basics" },
     ],
   },
   {
-    title: "WEB & SCRIPTING",
+    title: "FRAMEWORKS & LIBS",
     icon: "globe",
-    description: "Modern scripting libraries and frameworks for building responsive user interfaces.",
+    description: "Modern frameworks, runtime environments, and libraries for responsive full-stack applications.",
     skills: [
-      { name: "JavaScript", level: "Advanced" },
-      { name: "React.js", level: "Intermediate" },
-      { name: "HTML", level: "Expert" },
-      { name: "CSS", level: "Expert" },
+      { name: "React.js", level: "Advanced" },
+      { name: "Express.js", level: "Intermediate" },
+      { name: "Spring Boot", level: "Basics" },
+      { name: "Streamlit", level: "Intermediate" },
+      { name: "HTML5 & CSS3", level: "Expert" },
     ],
   },
   {
-    title: "DATABASES",
+    title: "DATABASES & ORMs",
     icon: "database",
-    description: "Structured and unstructured database management systems for reliable persistence.",
+    description: "Data storage engines, relational schemas, and Object-Relational Mapping tools.",
     skills: [
+      { name: "PostgreSQL", level: "Intermediate" },
       { name: "SQL", level: "Intermediate" },
       { name: "SQLite", level: "Intermediate" },
       { name: "MongoDB", level: "Basics" },
+      { name: "Prisma ORM", level: "Intermediate" },
     ],
   },
   {
-    title: "AREAS OF INTEREST",
+    title: "AI & CYBERSECURITY",
     icon: "layers",
-    description: "Key technology sub-fields and domains of active practice and design.",
+    description: "Machine learning models, computer vision pipelines, and system security simulators.",
     skills: [
-      { name: "Full Stack (MERN)", level: "Active" },
-      { name: "Database Systems", level: "Active" },
-      { name: "Machine Learning", level: "Active" },
-      { name: "UI / UX Design", level: "Active" },
+      { name: "OpenCV", level: "Intermediate" },
+      { name: "TensorFlow", level: "Intermediate" },
+      { name: "Gemini AI & LLMs", level: "Advanced" },
+      { name: "SIEM & EDR Tools", level: "Basics" },
+      { name: "Windows API", level: "Basics" },
+    ],
+  },
+  {
+    title: "DEVELOPER TOOLS",
+    icon: "wrench",
+    description: "VCS platforms, compilation builders, containerization, and API testing suites.",
+    skills: [
+      { name: "Git & GitHub", level: "Advanced" },
+      { name: "Vite", level: "Advanced" },
+      { name: "Postman", level: "Intermediate" },
+      { name: "JWT", level: "Intermediate" },
+      { name: "Zod Validation", level: "Intermediate" },
     ],
   },
   {
@@ -127,9 +147,7 @@ export default function Skills() {
               key={cat.title}
               variants={cardVariants}
               whileHover={{ y: -6 }}
-              className={`story-card group p-8 rounded-2xl flex flex-col justify-between relative shadow-xl ${colorClass} ${
-                idx === 3 ? "md:col-span-2 lg:col-span-1" : ""
-              } ${idx === 4 ? "md:col-span-2 lg:col-span-2" : ""}`}
+              className={`story-card group p-8 rounded-2xl flex flex-col justify-between relative shadow-xl ${colorClass}`}
             >
               <div className="absolute top-0 left-0 right-0 h-[2px] card-accent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute -top-16 -right-16 w-36 h-36 rounded-full blur-3xl pointer-events-none transition-all duration-700 card-glow" />
