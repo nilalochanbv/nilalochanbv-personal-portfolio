@@ -711,8 +711,9 @@ export default function Projects() {
                     >
                       {project.id === 1 && <LeafScannerDemo />}
                       {project.id === 2 && <ValidatorPreview />}
-                      {project.id === 3 && <NanoLinkDemo />}
-                      {project.id === 4 && <KeyloggerPreview />}
+                      {project.id === 3 && <ValidatorPreview />}
+                      {project.id === 4 && <NanoLinkDemo />}
+                      {project.id === 5 && <KeyloggerPreview />}
                     </motion.div>
                   </div>
                 </div>
