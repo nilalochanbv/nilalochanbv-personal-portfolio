@@ -61,6 +61,44 @@ const projectsData = [
   {
     id: 1,
     num: "01",
+    name: "DialectDB - Multilingual Text-to-SQL Pipeline",
+    tagline: "Multilingual Text-to-SQL Agent Pipeline",
+    description: "Building an AI agent that evaluates a beginner’s problem solving logic written in plain text, without an actual code solution. Utilizes LLM-based orchestration for access correctness, provides targeted hints, and guides learners through reasoning steps autonomously.",
+    tech: ["Python", "React", "Fast API", "Multi-dialect SQL", "Multilingual language"],
+    github: "https://github.com/nilalochanbv",
+    live: "https://github.com/nilalochanbv",
+    visual: "validator",
+    readmeDetails: {
+      features: [
+        "Logic Evaluation: Evaluates plain text pseudocode and problem solving logic without needing code execution.",
+        "Adaptive Prompting: Provides contextual clues and targets logic errors step-by-step using LLM agent helpers.",
+        "Multi-dialect Translation: Maps logical constructs to complex SQL queries across different database dialects."
+      ],
+      architecture: "Orchestrated using a React frontend, Python FastAPI logic validation controller, and Gemini AI agent pipelines."
+    }
+  },
+  {
+    id: 2,
+    num: "02",
+    name: "Code Logic Validator",
+    tagline: "AI Orchestration Logic Evaluation Engine",
+    description: "Building an AI agent that evaluates a beginner's problem solving logic written in plain text, without an actual code solution. Utilizes LLM-based orchestration for access correctness, provides targeted hints, and guides learners through reasoning steps autonomously.",
+    tech: ["Java", "LLM APIs", "Prompt Engineering"],
+    github: "https://github.com/nilalochanbv",
+    live: "https://github.com/nilalochanbv",
+    visual: "validator",
+    readmeDetails: {
+      features: [
+        "Natural Language Evaluator: Evaluates pseudocode and logic sentences directly using LLM evaluation models.",
+        "Adaptive Hinting System: Generates localized suggestions to help learners correct logic errors step-by-step.",
+        "Automated Cognitive Mapping: Diagnoses specific concept deficiencies to recommend learning paths."
+      ],
+      architecture: "Engineered using Java (Spring Boot) and integrated with LLM reasoning agents via Prompt Engineering to evaluate abstract problem-solving logic."
+    }
+  },
+  {
+    id: 3,
+    num: "03",
     name: "AI Powered Leaf Disease Detection and Smart Advisory System",
     tagline: "ML/CV Plant Disease Classification",
     description: "Developed a plant disease scanning application leveraging custom YOLO and DenseNet classification models. Features an advanced Multilingual AI Smart Advisory engine utilizing Google Gemini to automatically translate specialized diagnosis reports and preventive guides into 12 native regional languages.",
@@ -79,27 +117,8 @@ const projectsData = [
     }
   },
   {
-    id: 2,
-    num: "02",
-    name: "DialectDB - Multilingual Text-to-SQL Pipeline",
-    tagline: "Multilingual Text-to-SQL Agent Pipeline",
-    description: "Building an AI agent that evaluates a beginner’s problem solving logic written in plain text, without an actual code solution. Utilizes LLM-based orchestration for access correctness, provides targeted hints, and guides learners through reasoning steps autonomously.",
-    tech: ["Python", "React", "Fast API", "Multi-dialect SQL", "Multilingual language"],
-    github: "https://github.com/nilalochanbv",
-    live: "https://github.com/nilalochanbv",
-    visual: "validator",
-    readmeDetails: {
-      features: [
-        "Logic Evaluation: Evaluates plain text pseudocode and problem solving logic without needing code execution.",
-        "Adaptive Prompting: Provides contextual clues and targets logic errors step-by-step using LLM agent helpers.",
-        "Multi-dialect Translation: Maps logical constructs to complex SQL queries across different database dialects."
-      ],
-      architecture: "Orchestrated using a React frontend, Python FastAPI logic validation controller, and Gemini AI agent pipelines."
-    }
-  },
-  {
-    id: 3,
-    num: "03",
+    id: 4,
+    num: "04",
     name: "Nano Link",
     tagline: "High-Performance URL Shortener Service",
     description: "A fast, lightweight URL shortener service that transforms long URLs into clean, compact links. Implemented Prisma ORM, PostgreSQL database indexing, JWT authentication, and Zod input validation.",
@@ -118,8 +137,8 @@ const projectsData = [
     }
   },
   {
-    id: 4,
-    num: "04",
+    id: 5,
+    num: "05",
     name: "Contextkey Logging",
     tagline: "Keystroke Logging vulnerability simulator",
     description: "Simulated keylogging techniques in controlled environments to identify vulnerabilities. Designed detection and mitigation strategies using SIEM and EDR tools.",
