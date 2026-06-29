@@ -41,8 +41,11 @@ export default function About() {
         "Anthropic - AI Fluency: Framework & Foundations (June 2026)",
         "AWS - Fundamentals of Generative AI (June 2026)",
         "NPTEL - Introduction to Internet of Things (April 2026)",
+        "Coursera (CU Boulder) - Renewable Energy Technology Fundamentals (July 2025)",
         "Gen AI, LLM & Prototyping (June 2025)",
-        "NPTEL - Cloud Computing (May 2025)"
+        "NPTEL - Cloud Computing (May 2025)",
+        "IEEE - IEEE Xplore Training Certificate (October 2023)",
+        "ICT Academy - Learnathon 2023 (September 2023)"
       ],
       icon: Award,
       badgeClass: "badge-emerald",
