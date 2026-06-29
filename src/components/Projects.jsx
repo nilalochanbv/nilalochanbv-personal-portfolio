@@ -61,6 +61,26 @@ const projectsData = [
   {
     id: 1,
     num: "01",
+    name: "AI Powered Leaf Disease Detection and Smart Advisory System",
+    tagline: "ML/CV Plant Disease Classification",
+    description: "Developed a plant disease scanning application leveraging custom YOLO and DenseNet classification models. Features an advanced Multilingual AI Smart Advisory engine utilizing Google Gemini to automatically translate specialized diagnosis reports and preventive guides into 12 native regional languages.",
+    tech: ["Python", "OpenCV", "TensorFlow", "Gemini AI"],
+    github: "https://github.com/nilalochanbv/Smart-Leaf-Scanner-and-AI-Advisory-System-using-Gemini-Ai",
+    live: "https://github.com/nilalochanbv/Smart-Leaf-Scanner-and-AI-Advisory-System-using-Gemini-Ai",
+    visual: "scanner",
+    readmeDetails: {
+      features: [
+        "Leaf Detection: Employs a custom YOLO model to locate and bounding-box leaves in uploaded images.",
+        "Disease Classification: Analyzes leaves using a custom DenseNet121 model trained on 37 plant-disease categories.",
+        "Multilingual AI Advisory: Integrates Google Gemini AI to supply specialized educational recommendations in 12 languages.",
+        "Interactive Web Interface: Streamlit-based web application providing immediate visual feedback."
+      ],
+      architecture: "Separated into a computer vision pipeline for leaf localization, a deep learning classification engine, and an LLM advisory controller orchestrated via a lightweight Streamlit backend."
+    }
+  },
+  {
+    id: 2,
+    num: "02",
     name: "DialectDB - Multilingual Text-to-SQL Pipeline",
     tagline: "Multilingual Text-to-SQL Agent Pipeline",
     description: "Building an AI agent that evaluates a beginner’s problem solving logic written in plain text, without an actual code solution. Utilizes LLM-based orchestration for access correctness, provides targeted hints, and guides learners through reasoning steps autonomously.",
@@ -78,8 +98,8 @@ const projectsData = [
     }
   },
   {
-    id: 2,
-    num: "02",
+    id: 3,
+    num: "03",
     name: "Code Logic Validator",
     tagline: "AI Orchestration Logic Evaluation Engine",
     description: "Building an AI agent that evaluates a beginner's problem solving logic written in plain text, without an actual code solution. Utilizes LLM-based orchestration for access correctness, provides targeted hints, and guides learners through reasoning steps autonomously.",
@@ -94,26 +114,6 @@ const projectsData = [
         "Automated Cognitive Mapping: Diagnoses specific concept deficiencies to recommend learning paths."
       ],
       architecture: "Engineered using Java (Spring Boot) and integrated with LLM reasoning agents via Prompt Engineering to evaluate abstract problem-solving logic."
-    }
-  },
-  {
-    id: 3,
-    num: "03",
-    name: "AI Powered Leaf Disease Detection and Smart Advisory System",
-    tagline: "ML/CV Plant Disease Classification",
-    description: "Developed a plant disease scanning application leveraging custom YOLO and DenseNet classification models. Features an advanced Multilingual AI Smart Advisory engine utilizing Google Gemini to automatically translate specialized diagnosis reports and preventive guides into 12 native regional languages.",
-    tech: ["Python", "OpenCV", "TensorFlow", "Gemini AI"],
-    github: "https://github.com/nilalochanbv/Smart-Leaf-Scanner-and-AI-Advisory-System-using-Gemini-Ai",
-    live: "https://github.com/nilalochanbv/Smart-Leaf-Scanner-and-AI-Advisory-System-using-Gemini-Ai",
-    visual: "scanner",
-    readmeDetails: {
-      features: [
-        "Leaf Detection: Employs a custom YOLO model to locate and bounding-box leaves in uploaded images.",
-        "Disease Classification: Analyzes leaves using a custom DenseNet121 model trained on 37 plant-disease categories.",
-        "Multilingual AI Advisory: Integrates Google Gemini AI to supply specialized educational recommendations in 12 languages.",
-        "Interactive Web Interface: Streamlit-based web application providing immediate visual feedback."
-      ],
-      architecture: "Separated into a computer vision pipeline for leaf localization, a deep learning classification engine, and an LLM advisory controller orchestrated via a lightweight Streamlit backend."
     }
   },
   {
