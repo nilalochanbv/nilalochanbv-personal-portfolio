@@ -36,7 +36,14 @@ export default function About() {
     {
       num: "04",
       title: "Certifications",
-      text: "Certified in IBM SkillsBuild - Make Agentic AI Work for You (June 2026), Anthropic - AI Fluency: Framework & Foundations (June 2026), AWS - Fundamentals of Generative AI (June 2026), NPTEL Introduction to Internet of Things (April 2026), Gen AI, LLM & Prototyping (June 2025), and NPTEL Cloud Computing (May 2025).",
+      items: [
+        "IBM SkillsBuild - Make Agentic AI Work for You (June 2026)",
+        "Anthropic - AI Fluency: Framework & Foundations (June 2026)",
+        "AWS - Fundamentals of Generative AI (June 2026)",
+        "NPTEL - Introduction to Internet of Things (April 2026)",
+        "Gen AI, LLM & Prototyping (June 2025)",
+        "NPTEL - Cloud Computing (May 2025)"
+      ],
       icon: Award,
       badgeClass: "badge-emerald",
       cardClass: "story-card card-emerald",
@@ -119,9 +126,20 @@ export default function About() {
                     </div>
                   </div>
 
-                  <p className="text-neutral-400 font-sans font-light text-sm leading-relaxed z-10">
-                    {story.text}
-                  </p>
+                  {story.items ? (
+                    <ul className="text-neutral-400 font-sans font-light text-xs md:text-sm leading-relaxed z-10 flex flex-col gap-2 list-none">
+                      {story.items.map((item, itemIdx) => (
+                        <li key={itemIdx} className="flex items-start gap-2">
+                          <span className="text-emerald-500 mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-neutral-400 font-sans font-light text-sm leading-relaxed z-10">
+                      {story.text}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             );
