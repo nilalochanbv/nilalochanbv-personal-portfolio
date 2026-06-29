@@ -186,7 +186,7 @@ export default function Navbar() {
             <Github size={16} />
           </a>
           <a
-            href="https://www.linkedin.com/in/nilalochan-b-v-20b000288"
+            href="https://www.linkedin.com/in/nilalochanbv"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition-colors duration-300"
@@ -266,7 +266,7 @@ export default function Navbar() {
                 <span>GITHUB</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/nilalochan-b-v-20b000288"
+                href="https://www.linkedin.com/in/nilalochanbv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-white"

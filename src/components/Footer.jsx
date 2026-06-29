@@ -3,7 +3,7 @@ import { ArrowUp } from "lucide-react";
 export default function Footer() {
   const socialLinks = [
     { name: "GITHUB", href: "https://github.com/nilalochanbv" },
-    { name: "LINKEDIN", href: "https://www.linkedin.com/in/nilalochan-b-v-20b000288" },
+    { name: "LINKEDIN", href: "https://www.linkedin.com/in/nilalochanbv" },
     { name: "EMAIL", href: "mailto:nilalochanbv@gmail.com" },
     { name: "RESUME", href: "/resume.pdf" },
   ];

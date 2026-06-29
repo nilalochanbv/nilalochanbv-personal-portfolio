@@ -102,8 +102,8 @@ export default function Contact() {
 
             <div className="flex flex-col gap-1.5 border-l border-neutral-900 pl-6">
               <span className="font-mono text-[9px] text-neutral-500 uppercase tracking-widest">LinkedIn Profile</span>
-              <a href="https://www.linkedin.com/in/nilalochan-b-v-20b000288" target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-400 transition-colors text-lg font-mono">
-                linkedin.com/in/nilalochan-b-v-20b000288
+              <a href="https://www.linkedin.com/in/nilalochanbv" target="_blank" rel="noopener noreferrer" className="text-white hover:text-neutral-400 transition-colors text-lg font-mono">
+                linkedin.com/in/nilalochanbv
               </a>
             </div>
 
