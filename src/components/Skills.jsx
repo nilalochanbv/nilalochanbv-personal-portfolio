@@ -25,6 +25,7 @@ const skillsCategories = [
     skills: [
       { name: "Java", level: "Advanced" },
       { name: "Python", level: "Advanced" },
+      { name: "TypeScript", level: "Intermediate" },
       { name: "C", level: "Basics" },
     ],
   },
@@ -35,8 +36,9 @@ const skillsCategories = [
     skills: [
       { name: "JavaScript", level: "Advanced" },
       { name: "React.js", level: "Intermediate" },
-      { name: "HTML", level: "Expert" },
-      { name: "CSS", level: "Expert" },
+      { name: "FastAPI", level: "Intermediate" },
+      { name: "Express.js", level: "Intermediate" },
+      { name: "HTML / CSS", level: "Expert" },
     ],
   },
   {
@@ -44,7 +46,8 @@ const skillsCategories = [
     icon: "database",
     description: "Structured and unstructured database management systems for reliable persistence.",
     skills: [
-      { name: "SQL", level: "Intermediate" },
+      { name: "SQL & PostgreSQL", level: "Intermediate" },
+      { name: "MySQL", level: "Intermediate" },
       { name: "SQLite", level: "Intermediate" },
       { name: "MongoDB", level: "Basics" },
     ],
@@ -55,8 +58,9 @@ const skillsCategories = [
     description: "Key technology sub-fields and domains of active practice and design.",
     skills: [
       { name: "Full Stack (MERN)", level: "Active" },
-      { name: "Database Systems", level: "Active" },
-      { name: "Machine Learning", level: "Active" },
+      { name: "Machine Learning / CV", level: "Active" },
+      { name: "Generative AI & LLMs", level: "Active" },
+      { name: "Cybersecurity (SIEM)", level: "Active" },
       { name: "UI / UX Design", level: "Active" },
     ],
   },
