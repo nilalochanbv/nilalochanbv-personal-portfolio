@@ -157,6 +157,143 @@ const projectsData = [
   }
 ];
 
+const dialectDbSlides = [
+  {
+    image: "/db_demo_1.png",
+    title: "1. Overview Dashboard",
+    desc: "Metrics dashboard rendering connected database engines, total active tables/rows, query latency, success rates, and live query history."
+  },
+  {
+    image: "/db_demo_2.png",
+    title: "2. Schema Explorer",
+    desc: "Inspect tables, columns, indexes, types, nullability, and primary/foreign key mappings dynamically across the database."
+  },
+  {
+    image: "/db_demo_3.png",
+    title: "3. SQL Editor & AI Copilot",
+    desc: "Write SQL manually with real-time schemas, or prompt the Gemini-powered AI database assistant to generate dialect-correct SQL."
+  },
+  {
+    image: "/db_demo_4.png",
+    title: "4. Connection Profiles Manager",
+    desc: "Manage multiple connections to SQLite, PostgreSQL, MySQL, and SQL Server databases simultaneously."
+  },
+  {
+    image: "/db_demo_5.png",
+    title: "5. Export Formats Panel",
+    desc: "Seamlessly export query outputs or database table states into standard formats like CSV, JSON, and raw SQL."
+  }
+];
+
+function DialectDbDemo() {
+  const [slideIdx, setSlideIdx] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSlideIdx((prev) => (prev + 1) % dialectDbSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const current = dialectDbSlides[slideIdx];
+
+  return (
+    <motion.div
+      key="dialect-demo"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.4 }}
+      className="absolute inset-0 flex flex-col justify-between p-6 bg-black font-sans"
+    >
+      <div className="flex justify-between items-center border-b border-neutral-900 pb-3">
+        <div className="flex gap-1.5 items-center">
+          <div className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
+          <span className="font-display font-medium text-[10px] text-white tracking-wider uppercase">
+            DIALECTDB CLIENT ENGINE
+          </span>
+        </div>
+        <span className="font-mono text-[9px] text-neutral-500">
+          Step {slideIdx + 1} / 5
+        </span>
+      </div>
+
+      <div className="flex-1 relative w-full rounded overflow-hidden border border-neutral-900 bg-neutral-950/20 flex items-center justify-center group/slide my-3">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={slideIdx}
+            src={current.image}
+            alt={current.title}
+            initial={{ opacity: 0, scale: 1.02 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.3 }}
+            className="w-full h-full object-contain"
+          />
+        </AnimatePresence>
+
+        <div className="absolute inset-0 flex justify-between items-center px-2 opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setSlideIdx((prev) => (prev - 1 + dialectDbSlides.length) % dialectDbSlides.length);
+            }}
+            className="w-7 h-7 rounded-full border border-neutral-800 bg-neutral-950/90 text-white flex items-center justify-center pointer-events-auto hover:bg-neutral-800 transition-colors text-xs font-bold cursor-pointer"
+          >
+            ←
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setSlideIdx((prev) => (prev + 1) % dialectDbSlides.length);
+            }}
+            className="w-7 h-7 rounded-full border border-neutral-800 bg-neutral-950/90 text-white flex items-center justify-center pointer-events-auto hover:bg-neutral-800 transition-colors text-xs font-bold cursor-pointer"
+          >
+            →
+          </button>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1 min-h-[50px] border-t border-neutral-900 pt-3">
+        <h4 className="font-display font-semibold text-[11px] text-violet-400 uppercase tracking-wider">
+          {current.title}
+        </h4>
+        <p className="text-[10px] text-neutral-400 font-sans leading-relaxed">
+          {current.desc}
+        </p>
+      </div>
+
+      <div className="flex gap-1.5 w-full mt-2">
+        {dialectDbSlides.map((_, sIdx) => {
+          const isActive = sIdx === slideIdx;
+          return (
+            <div
+              key={sIdx}
+              onClick={(e) => {
+                e.stopPropagation();
+                setSlideIdx(sIdx);
+              }}
+              className="flex-1 h-1 rounded-full bg-neutral-900 overflow-hidden cursor-pointer relative"
+            >
+              {isActive && (
+                <motion.div
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 5, ease: "linear" }}
+                  className="absolute top-0 bottom-0 left-0 bg-violet-500"
+                />
+              )}
+              {!isActive && sIdx < slideIdx && (
+                <div className="absolute inset-0 bg-neutral-700" />
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </motion.div>
+  );
+}
+
 const leafScannerSlides = [
   {
     image: "/leaf_demo_1.png",
@@ -710,7 +847,7 @@ export default function Projects() {
                       style={{ transformStyle: "preserve-3d", perspective: "1000px" }}
                     >
                       {project.id === 1 && <LeafScannerDemo />}
-                      {project.id === 2 && <ValidatorPreview />}
+                      {project.id === 2 && <DialectDbDemo />}
                       {project.id === 3 && <ValidatorPreview />}
                       {project.id === 4 && <NanoLinkDemo />}
                       {project.id === 5 && <KeyloggerPreview />}
