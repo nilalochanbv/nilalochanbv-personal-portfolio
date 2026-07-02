@@ -139,7 +139,8 @@ export default function GithubDashboard() {
               }
             }
             
-            commitsEst = contData.totalContributions || commitsEst;
+            const computedTotal = days.reduce((sum, d) => sum + d.contributionCount, 0);
+            commitsEst = computedTotal || commitsEst;
             currentStreak = computedCurrent || currentStreak;
             longestStreak = computedLongest || longestStreak;
           }
